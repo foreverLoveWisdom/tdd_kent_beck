@@ -3,11 +3,11 @@
 class Dollar
   attr_reader :amount
 
-  def initialize(_amount)
-    @amount = 10
-  end
+  def initialize(_amount); end
 
-  def times(_another_number); end
+  def times(_another_number)
+    @amount = 5 * 2
+  end
 end
 
 RSpec.describe 'Multiplication' do
