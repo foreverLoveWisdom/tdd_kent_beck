@@ -3,10 +3,12 @@
 class Dollar
   attr_reader :amount
 
-  def initialize(_amount); end
+  def initialize(amount)
+    @amount = amount
+  end
 
-  def times(_another_number)
-    @amount = 5 * 2
+  def times(another_number)
+    @amount = amount * another_number
   end
 end
 
