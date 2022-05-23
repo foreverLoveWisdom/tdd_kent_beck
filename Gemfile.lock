@@ -7,6 +7,9 @@ GEM
     diff-lcs (1.5.0)
     ffi (1.15.5)
     formatador (1.1.0)
+    fuubar (2.5.1)
+      rspec-core (~> 3.0)
+      ruby-progressbar (~> 1.4)
     guard (2.18.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -80,9 +83,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  fuubar
   guard
   guard-rspec
   pry-byebug
+  rspec
   rubocop
   rubocop-rspec
 
