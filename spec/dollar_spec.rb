@@ -1,28 +1,8 @@
 # frozen_string_literal: true
 
-require 'pry-byebug'
+require_relative '../lib/dollar'
 
-class Dollar
-  def initialize(amount)
-    @amount = amount
-  end
-
-  def times(another_number)
-    Dollar.new(amount * another_number)
-  end
-
-  def ==(other)
-    amount == other.send(:amount)
-  end
-
-  alias equals ==
-
-  private
-
-  attr_reader :amount
-end
-
-RSpec.describe 'Multiplication' do
+RSpec.describe Dollar do
   describe '#equals' do
     it 'can test equality' do
       expect(Dollar.new(5).equals(Dollar.new(5))).to be_truthy

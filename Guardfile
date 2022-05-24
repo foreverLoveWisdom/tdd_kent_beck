@@ -1,3 +1,4 @@
+require 'pry-byebug'
 notification :terminal_notifier, sound: 'default' if `uname` =~ /Darwin/
 
 
@@ -15,6 +16,7 @@ guard :rspec, cmd: "bundle exec rspec" do
 
   # Ruby files
   ruby = dsl.ruby
+
   dsl.watch_spec_files_for(ruby.lib_files)
 
   # Rails files
