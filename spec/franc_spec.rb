@@ -1,30 +1,12 @@
 # frozen_string_literal: true
 
-class Franc
-  def initialize(amount)
-    @amount = amount
-  end
-
-  def times(another_number)
-    Franc.new(amount * another_number)
-  end
-
-  def ==(other)
-    amount == other.send(:amount)
-  end
-
-  alias equals ==
-
-  private
-
-  attr_reader :amount
-end
+require_relative '../lib/franc'
 
 RSpec.describe 'Multiplication' do
   describe '#equals' do
     it 'can test equality' do
-      expect(Franc.new(5).equals(Franc.new(5))).to be_truthy
-      expect(Franc.new(5).equals(Franc.new(6))).to be_falsy
+      expect(Franc.new(5).equals(5)).to be_truthy
+      expect(Franc.new(5).equals(6)).to be_falsy
     end
   end
 
